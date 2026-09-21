@@ -1,30 +1,55 @@
-### CLUE ####
+# CLUE: A Contrastive Learning Framework for Unsupervised Event Type Induction and Annotation
 
+CLUE is an unsupervised framework for event-type induction, event-type naming, and sentence-level event annotation.
 
-### Pre-requisites ###
+<p align="center">
+  <img src="assets/clue_overview.png"
+       alt="Overview of the CLUE framework"
+       width="900">
+</p>
 
-Python libraries like OpenIE and TextEE are needed to preprocess the data
-The event datasets like ACE, MAVEN and RAMS have to downloaded from their source(some have proprietary access)
-Put the train json file in the data folder.
+<p align="center">
+  <em>
+    Overview of CLUE: predicate–object extraction, joint-instance encoding,
+    predicate augmentation, contrastive learning, K-Means exemplar clustering,
+    LLM-assisted event naming, and event-type refinement.
+  </em>
+</p>
 
-###########
+## Prerequisites
 
-Run following scripts in order:
+CLUE requires the following resources:
 
-1. extract_po.py
-2. create_instances.py
-3. create_masked_instances.py
-4. augment_verbs.py
-5. prep_filter_kmeans.py
-6. kmeans_exemplar.py
-7. centroid_selection.py
-8. ename.py
-9. edef.py
-10. merge_names.py
-11. merge_clus.py
+- Python and the libraries specified in the project requirements
+- Stanford OpenIE for predicate–object extraction
+- TextEE for event-data preprocessing
+- An event extraction dataset, such as ACE, MAVEN, or RAMS
 
+Download each dataset from its official source. Some datasets require licenses or proprietary access. Place the corresponding training JSON file in the `data/` directory.
 
-###################
+## Running CLUE
 
-The prompt for ename and edef have to be modified as per dataset.
+Run the following scripts in order:
 
+```bash
+python extract_po.py
+python create_instances.py
+python create_masked_instances.py
+python augment_verbs.py
+python prep_filter_kmeans.py
+python kmeans_exemplar.py
+python centroid_selection.py
+python ename.py
+python edef.py
+python merge_names.py
+python merge_clus.py
+```
+
+### Dataset-specific prompts
+
+Before running the following scripts, modify their prompt templates for the target dataset:
+
+- `ename.py`: generates event-type names for the induced clusters.
+- `edef.py`: generates fine-grained definitions for the induced event types.
+
+The prompt examples and ontology terminology should correspond to the dataset being processed.
