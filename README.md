@@ -1,6 +1,6 @@
 # CLUE: A Contrastive Learning Framework for Unsupervised Event Type Induction and Annotation
 
-CLUE is an unsupervised framework for event-type induction, event-type naming, and sentence-level event annotation.
+
 
 <p align="center">
   <img src="assets/clue_overview.png"
@@ -10,26 +10,24 @@ CLUE is an unsupervised framework for event-type induction, event-type naming, a
 
 <p align="center">
   <em>
-    Overview of CLUE: predicate–object extraction, joint-instance encoding,
-    predicate augmentation, contrastive learning, K-Means exemplar clustering,
-    LLM-assisted event naming, and event-type refinement.
+    Overview of CLUE framework
   </em>
 </p>
 
 ## Prerequisites
 
-CLUE requires the following resources:
+CLUE requires the following as below:
 
-- Python and the libraries specified in the project requirements
-- Stanford OpenIE for predicate–object extraction
-- TextEE for event-data preprocessing
-- An event extraction dataset, such as ACE, MAVEN, or RAMS
+- Python and the libraries specified in project requirements
+- Stanford OpenIE library for predicate–object extraction
+- TextEE library for event-data preprocessing
 
-Download each dataset from its official source. Some datasets require licenses or proprietary access. Place the corresponding training JSON file in the `data/` directory.
+
+Please make sure to download each dataset from its official source and put the corresponding training JSON file in the `data/` directory.
 
 ## Running CLUE
 
-Run the following scripts in order:
+Run the scripts in order:
 
 ```bash
 python extract_po.py
@@ -47,9 +45,7 @@ python merge_clus.py
 
 ### Dataset-specific prompts
 
-Before running the following scripts, modify their prompt templates for the target dataset:
+Please modify the LLM scripts as for dataset:
 
 - `ename.py`: generates event-type names for the induced clusters.
 - `edef.py`: generates fine-grained definitions for the induced event types.
-
-The prompt examples and ontology terminology should correspond to the dataset being processed.
