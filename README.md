@@ -58,3 +58,23 @@ Our paper appears in **Findings of AACL 2026**:
 **CLUE: A Contrastive Learning Framework for Unsupervised Event Type Induction and Annotation**
 
 [ACL Anthology](https://aclanthology.org/2026.findings-aacl.106/) | [PDF](https://aclanthology.org/2026.findings-aacl.106.pdf)
+
+## Citation
+
+If you use CLUE in your research, please cite our paper:
+
+```bibtex
+@inproceedings{maitra-etal-2026-clue,
+    title = "{CLUE}: A Contrastive Learning Framework for Unsupervised Event Type Induction and Annotation",
+    author = "Maitra, Pratik and Kwon, Lauren and Li, Qi",
+    editor = "Zhang, Yue and Xu, Ruifeng and Purwarianti, Ayu and Rong, Tong and Suzuki, Jun",
+    booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {IJCNLP}-{AACL} 2026",
+    month = nov,
+    year = "2026",
+    address = "Hengqin, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.findings-aacl.106/",
+    pages = "2094--2111",
+    ISBN = "979-8-89176-444-6"
+}
+```
