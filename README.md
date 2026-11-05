@@ -49,3 +49,12 @@ Please modify the LLM scripts as for dataset:
 
 - `ename.py`: generates event-type names for the induced clusters.
 - `edef.py`: generates fine-grained definitions for the induced event types.
+
+
+## Paper
+
+Our paper appears in **Findings of AACL 2026**:
+
+**CLUE: A Contrastive Learning Framework for Unsupervised Event Type Induction and Annotation**
+
+[ACL Anthology](https://aclanthology.org/2026.findings-aacl.106/) | [PDF](https://aclanthology.org/2026.findings-aacl.106.pdf)
